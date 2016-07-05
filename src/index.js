@@ -1,4 +1,4 @@
-import Server from './Server.js'
+import Server from './server.js'
 import config from '../config.js'
 
 async function main() {

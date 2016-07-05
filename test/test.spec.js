@@ -1,6 +1,6 @@
 import should from 'should'
 import axios from 'axios'
-import Server from '../src/Server.js'
+import Server from '../src/server.js'
 
 describe('test works', () => {
   let server
