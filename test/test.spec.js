@@ -20,6 +20,7 @@ describe('test works', () => {
 
   it('should work', async () => {
     const res = await axios.get('http://localhost:8080')
+    should.exist(res)
     res.status.should.equal(200)
   })
 })

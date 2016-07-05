@@ -1,4 +1,7 @@
 # Express Starter
+
+[![Build Status](https://travis-ci.org/esayemm/express-starter.svg?branch=master)](https://travis-ci.org/esayemm/express-starter)
+
 Boilerplate for starting a node express project.
 
 ##Prerequisite

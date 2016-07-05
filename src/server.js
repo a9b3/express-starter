@@ -32,6 +32,7 @@ export default class Server {
   }
 
   async stop() {
-    await this.server && this.server.close()
+    if (!this.server) return
+    await this.server.close()
   }
 }
