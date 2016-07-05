@@ -7,7 +7,7 @@ globally.
 
 ##Installation
 ```sh
-sdcli save express https://github.com/esayemm/starter-deck_express-kit
+sdcli save express https://github.com/esayemm/express-starter
 ```
 <hr>
 ##Development
