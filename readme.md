@@ -26,3 +26,11 @@ npm version [ major | minor | patch ]
 3. push tag
 4. builds
 5. npm publish
+
+## Deployment
+
+Use provided Dockefile and push to your own repositories.
+
+```sh
+docker build -t <name>/<imagename>:<tag> .
+```
