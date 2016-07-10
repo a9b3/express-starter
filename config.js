@@ -2,20 +2,27 @@ const env = process.env.NODE_ENV
 
 const config = {}
 
-config.default = {
-  port: 8080,
+const envOverrides = {
+  port: process.env.PORT,
 }
 
 config.dev = {
-
+  port: envOverrides.port || 8080,
 }
 
 config.test = {
+  port: envOverrides.port || 8080,
+}
 
+config.travis = {
+  port: envOverrides.port || 8080,
 }
 
 config.prod = {
-
+  port: envOverrides.port || 8080,
 }
 
-export default Object.assign({}, config.default, config[env])
+export default Object.assign(
+  {},
+  config[env],
+)
