@@ -1,16 +1,35 @@
 language: node_js
 node_js:
-  - "5.1"
+  - "6.1"
+
+# sudo: required
+#
+# services:
+#   - docker
+#   - redis-server
+
+env:
+  - MONGODB_VERSION=2.6.10 NODE_ENV=travis
 
 cache:
   directories:
     - node_modules
 
-env:
-  - NODE_ENV=travis
+# If you want to use mongodb along with docker you have to do this and set
+# MONGODB_VERSION in env up top
+# before_install:
+#   - wget http://fastdl.mongodb.org/linux/mongodb-linux-x86_64-$MONGODB_VERSION.tgz
+#   - tar xfz mongodb-linux-x86_64-$MONGODB_VERSION.tgz
+#   - export PATH=`pwd`/mongodb-linux-x86_64-$MONGODB_VERSION/bin:$PATH
+#   - mkdir -p data/db
+#   - mongod --dbpath=data/db &
+#   - sleep 3
 
 install:
   - npm install
 
 script:
   - npm test
+
+after_success:
+  - test $TRAVIS_BRANCH = "prod" && npm run deploy

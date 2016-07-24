@@ -8,7 +8,8 @@
     "lint": "./node_modules/eslint/bin/eslint.js .",
     "test": "npm run lint && npm run test:js",
     "test:js": "./node_modules/mocha/bin/mocha --compilers js:babel-register --require babel-polyfill",
-    "test:js:watch": "./node_modules/mocha/bin/mocha --compilers js:babel-register --require babel-polyfill --watch"
+    "test:js:watch": "./node_modules/mocha/bin/mocha --compilers js:babel-register --require babel-polyfill --watch",
+    "deploy": "echo deploy script here"
   },
   "homepage": "",
   "bugs": {
